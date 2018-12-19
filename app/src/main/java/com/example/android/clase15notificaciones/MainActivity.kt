@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.TaskStackBuilder
+import android.support.v4.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //el intento se llama igual al de llamar actividad, pero en este caso
+        //se trae la clase servicio, de tipo SERVICE. asi se carga los servicios
+        var intento = Intent(this, Servicio :: class.java)
+
+        btnStart.setOnClickListener{
+            //startService(intento)
+            ContextCompat.startForegroundService(this,intento)
+        }
+
+        btnStop.setOnClickListener {
+            stopService(intento)
+        }
 
         //SE CREA EL CANAL DE LA NOTIFICACION
     btnNotificacion.setOnClickListener {

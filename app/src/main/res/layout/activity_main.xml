@@ -9,10 +9,27 @@
 
     <Button
             android:text="Notificacion"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" android:id="@+id/btnNotificacion"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="4dp"/>
+            android:layout_marginBottom="4dp" app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintVertical_bias="0.174"/>
+    <Button
+            android:text="iniciar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/btnStart"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" android:layout_marginTop="13dp"
+            app:layout_constraintVertical_bias="0.393"/>
+    <Button
+            android:text="detener"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/btnStop"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintVertical_bias="0.671"/>
 
 </android.support.constraint.ConstraintLayout>
